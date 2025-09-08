@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background-color:#f0f4f8;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+form{
+display:flex;
+flex-direction:column;}
+
+
+
+
+label{
+color:#555;
+font-size:14px;
+font-weight:bold;
+margin-bottom:5px;
+display:block;
+}
+
+
+input,select,button{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+font-size:14px;
+}
+
+
+
+button{
+background-color:#4CAF50;
+color:white;
+border:none;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+padding:12px;
+}
+
+button:hover{
+background-color:#35b088;
+}
+</style>
+</head>
+<body>
+<form action="/action_page.php">
+<h2>Registration Form</h2>
+<label for="fname">First Name:</label><br>
+<input type="text" id="fname" name="fname" value="Niha"><br> 
+
+<label for="lname">Last Name:</label><br>
+<input type="text" id="lname" name="lname" value="R M"><br><br>
+
+
+
+<p>choose your favourite Web language</p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for ="html">HTML</label><br>
+
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for ="css">CSS</label><br>
+
+<input type="radio" id="javaScript" name="fav_language" value="JAVASCRIPT">
+<label for ="javascript">JavaScript</label><br><br>
+
+
+ <p>Choose your vechicle</p>
+<input type="checkbox" id="vechicle1" name="vechicle1" value="Bike">
+<label for ="vechicle1">I have a Bike</label><br>
+
+<input type="checkbox" id="vechicle2" name="vechicle2" value="Car">
+<label for ="vechicle2">I have a Car</label><br>
+
+<input type="checkbox" id="vechicle3" name="vechicle3" value="Boat">
+<label for ="vechicle3">I have a Boat</label><br><br>
+
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" >
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select><br><br>
+
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="2" multiple >
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select><br><br>
+
+
+
+<label for="username">Username:</label><br>
+<input type="text" id="username" name="username"><br> 
+
+<label for ="pwd">Password</label><br>
+<input type="password"  id="password" name="password"><br><br>
+
+
+<label for ="favcolor">Select your favourite color:</label>
+<input type="color" id="favcolor" name="favcolor" value="#00ff00"><br><br>
+
+<label for ="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday" ><br><br>
+
+
+<label for ="email">Enter your email:</label>
+<input type="mail" id="email" name="email" ><br><br>
+
+
+<label for ="Quantity">Quantity(1 to 100):</label>
+<input type="number" id="Quantity" name="Quantity"  min="1" max="100" ><br><br>
+
+
+
+
+
+
+
+
+<input type="submit"  value="submit">
+
+</form>
+
+</body>
+</html>
