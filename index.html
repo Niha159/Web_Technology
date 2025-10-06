@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+<style>
+body {
+margin:0;
+ padding:0;
+  background-color:skyblue; 
+  height:100vh;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  background-color:pink;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width:350px;
+  text-align: center;
+}
+
+.calculator h2 {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #f68f9b;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.button-group button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #cf4b8d;
+  color: rgb(15, 16, 3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-group button:hover {
+  background-color: #e839e8b0;
+  transform: scale(1.05);
+}
+
+.resultcalc{
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ec3d9a;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+<div class="calculator" id="calc">
+<h2>Simple calculator</h2>
+<input type="number" id="input1" class="input-field" placeholder="Enter First number">
+<input type="number" id="input2" class="input-field" placeholder="Enter Second number">
+<div class="button-group">
+<button onclick="calculate('Add')">Add</button>
+<button onclick="calculate('Subtract')">Subtract</button>
+<button onclick="calculate('Multiply')">Multiply</button>
+<button onclick="calculate('Division')">Division</button>
+<button onclick="calculate('Quotient')">Qutioent</button>
+<button onclick="calculate('Remainder')">Remainder</button>
+<button onclick="calculate('Power')">Power</button>
+<button onclick="calculate('Squareroot')">Squareroot</button>
+<button onclick="calculate('Square')">Square</button>
+</div>
+<div class="Resultofcalc" id="result">Result:</div>
+</div>
+<script>
+
+
+function calculate(operation) {
+  const num1 = parseFloat(document.getElementById('input1').value);
+  const num2 = parseFloat(document.getElementById('input2').value);
+  let result;
+
+  switch (operation) {
+    case 'Add':
+      result = num1 + num2;
+      break;
+    case 'Subtract':
+      result = num1 - num2;
+      break;
+    case 'Multiply':
+      result = num1 * num2;
+      break;
+    case 'Division':
+      result = num2 !== 0 ? num1 / num2 : 'Error: Division by zero';
+      break;
+    case 'Quotient':
+  if (num2 !== 0) {
+    result = Math.floor(num1 / num2);  // Integer division, quotient only
+  } else {
+    result = 'Error: Division by zero';
+  }
+  break;
+
+    case 'Remainder':
+      result = num2 !== 0 ? num1 % num2 : 'Error: Division by zero';
+      break;
+    case 'Power':
+      result = Math.pow(num1, num2);
+      break;
+    case 'Squareroot':
+      result = num1 >= 0 ? Math.sqrt(num1).toFixed(4) : 'Error: Negative input';
+      break;
+    case 'Square':
+      result = Math.pow(num1, 2);
+      break;
+    default:
+      result = 'Invalid operation';
+  }
+
+  document.getElementById('result').innerText = 'Result: ' + result;
+}
+
+
+</script> 
+
+</body>
+</html>
