@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Script Tasks</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    p, ul, div {
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    ul#list li:nth-child(1) { color: crimson; font-family: 'Georgia'; }
+    ul#list li:nth-child(2) { color: teal; font-family: 'Courier New'; }
+    ul#list li:nth-child(3) { color: darkgreen; font-family: 'Verdana'; }
+    ul#list li:nth-child(4) { color: darkblue; font-family: 'Tahoma'; }
+    ul#list li:nth-child(5) { color: maroon; font-family: 'Lucida Console'; }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #f4f4f4;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    #appendBtn {
+      background-color: #007BFF;
+    }
+    
+
+    #appendBtn {
+      background-color: #28A745;
+    }
+
+
+
+
+    #animateBtn1 {
+      background-color: #28A745;
+    }
+
+    #animateBtn2 {
+      background-color: #DC3545;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Append Content</h2>
+  <p id="para">This is an existing paragraph</p>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+  <button id="appendBtn">Append content</button>
+
+  <h2>Animate Element</h2>
+  <div class="box" id="animateBox1"></div>
+  <button id="animateBtn1">Animate Box 1</button>
+
+  <div class="box" id="animateBox2"></div>
+  <button id="animateBtn2">Animate Box 2</button>
+
+  <script>
+    $(document).ready(function () {
+      let itemCount = $('#list li').length;
+
+      $('#appendBtn').click(() => {
+        itemCount++;
+        $('#para').append(` Appended text ${itemCount}.`);
+        $('#list').append(`<li style="color: purple; font-family: monospace;">Item ${itemCount}</li>`);
+      });
+
+      $('#animateBtn1').click(() => {
+        $('#animateBox1')
+          .css({
+            width: '100px',
+            height: '100px',
+            backgroundColor: '#f4f4f4'
+          })
+          .animate({
+            width: '150px',
+            height: '150px'
+          }, 500, function () {
+            $(this).css('background-color', 'lightblue');
+          });
+      });
+
+      $('#animateBtn2').click(() => {
+        $('#animateBox2')
+          .css({
+            width: '100px',
+            height: '100px',
+            backgroundColor: '#f4f4f4'
+          })
+          .animate({
+            width: '150px',
+            height: '150px'
+          }, 500, function () {
+            $(this).css('background-color', 'lightgreen');
+          });
+      });
+    });
+  </script>
+
+</body>
+</html>
