@@ -1,0 +1,30 @@
+body{
+    font-family:Arial,sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+section{
+    margin-bottom: 20px;
+}
+h1,h2{
+    color:#333;
+}
+
+textarea,input{
+    width: 100%;
+    padding:10px 20px;
+    margin-top:10px;
+}
+button{
+    padding:10px 20px;
+    margin-top:10px;
+    cursor: pointer;
+}
+
+pre,p{
+    background-color: #f4f4f4;
+    padding: 10px;
+    border:1px solid #ddd;
+}

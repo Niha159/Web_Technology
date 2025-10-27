@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON and Data Manipulation</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+<body>
+    <h1>JSON and Data Manipulation</h1>
+
+    <!-- JSON to Object -->
+    <section id="jsonToObject">
+        <h2>Convert JSON Text to JavaScript Object</h2>
+        <textarea id="jsonInputObject" placeholder='Enter JSON text here, e.g. {"name":"John","age":30}'></textarea>
+        <button onclick="convertJsonObject()">Convert to Object</button>
+        <pre id="objectOutput"></pre>
+    </section>
+
+    <!-- JSON Date -->
+    <section id="jsonToDate">
+        <h2>Convert JSON Date Text to JavaScript Date Object</h2>
+        <input type="text" id="dateInput" placeholder='{"date":"2023-10-01"}'>
+        <button onclick="convertJsonToDate()">Convert to Date</button>
+        <p id="dateOutput"></p>
+    </section>
+
+    <!-- JSON ↔ CSV -->
+    <section id="jsonCsvConversion">
+        <h2>Convert JSON to CSV and CSV to JSON</h2>
+
+        <h3>JSON ➜ CSV</h3>
+        <textarea id="jsonCsvInput" placeholder='Enter JSON array here, e.g. [{"name":"John","age":30},{"name":"Jane","age":25}]'></textarea>
+        <button onclick="convertJsonToCsv()">Convert JSON to CSV</button>
+        <pre id="csvOutput"></pre>
+
+        <h3>CSV ➜ JSON</h3>
+        <textarea id="csvToJsonInput" placeholder="Enter CSV here, e.g. name,age&#10;John,30&#10;Jane,25"></textarea>
+        <button onclick="convertCsvToJson()">Convert CSV to JSON</button>
+        <pre id="jsonOutput"></pre>
+    </section>
+
+    <!-- Hash Generator -->
+    <section id="hashString">
+        <h2>Create Hash from String</h2>
+        <input type="text" id="hashInput" placeholder="Enter text to hash">
+        <button onclick="createHash()">Generate Hash</button>
+        <p id="hashOutput"></p>
+    </section>
+
+    <script src="7.js"></script>
+</body>
+</html>
